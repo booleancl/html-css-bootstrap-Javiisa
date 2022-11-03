@@ -87,4 +87,165 @@ Los links son el corazòn de internet y los crearemos frecuentemente. Se compone
 
  ### Imagenes
 
- Las imàgenes son una 
+Las imágenes son una de las etiquetas que no require de cierre ya que la imagen que se despliega se indica mediante el atributo `src` y en caso de que la imagen no esté disponible se despliega el texto indicado en el atributo `alt` conocido como texto alternativo.
+
+### Listas
+
+#### Ordenadas
+
+```html
+  <ol>Dias de la semana
+    <li>Lunes</li>
+    <li>Martes</li>
+    <li>Miércoles</li>
+    <li>Jueves</li>
+    <li>Viernes</li>
+  </ol> 
+```
+
+### No ordenadas
+
+```html
+  <ul>Pilares de la Web
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+  </ul>
+```
+
+### Tablas
+
+```html
+  <table>
+    <tr>
+      <th>Italiano</th>
+      <th>Chacarero</th>
+    </tr>
+    <tr>
+      <td>Tomate</td>
+      <td>Lechuga</td>
+    </tr>
+    <tr>
+      <td>Palta</td>
+      <td>Porotos</td>
+    </tr>
+    <tr>
+      <td>Mayo</td>
+      <td>Ají</td>
+    </tr>
+  </table>
+```
+
+
+# css
+
+
+Ejemplo de selector por id
+```css
+#fname{
+  border-radius: 6px;
+}
+```CSS es muy flexible y permite combinar selectores, Ej:
+```css
+p.centered{
+  text-align:center;
+  color: purple;
+}
+```
+Si tenemos reglas que se repiten. Ejemplo```cssh1{
+  text-align: center;
+  color: blue
+}h2{
+  text-align: center;
+  color: blue
+}
+```
+Podemos refactorizarlo en una sola regla:```css
+h1, h2{
+  text-align: center;
+  color: blue
+}
+```
+Selector | Ejemplo | Descripcion
+----|----|----
+#id | .some-id | Selecciona el elemento con `id="some.id"`
+.class | .some-class | Selecciona TODOS los elementos con clase `class="some-class"`
+element.class | p.intro | Selecciona solor los `<p>`con clase `class="intro"`
+element, element | div, p | Selecciona todos los elementos `<div>` y `<p>`
+### Modelo de caja 
+
+En esencia cada elemento html está inserto dentro de una caja que consiste de: Margen, Borde, Padding y contenido.
+
+![Box Model](img/box-model.png)
+
+### Unidades de medida 
+
+En general, no solo en desarrollo, podemos clasificar las unidades de medidas en dos grupos:
+
+- Unidades Absolutas: pixel(px)
+- Unidades Relativas: porcentaje(%), rem, em, vh, vw#
+
+## rem
+Es una unidad de medida relativa al font-size del elemento raíz.
+
+### em
+Es relativa  al font-size del mismo elemento
+
+### vh
+Es relativo al 1% del alto de la pantalla o (viewport)
+
+### vw
+Es relativo al 1% del ancho de la pantalla o viewport
+
+### Tipos de diseno
+
+- El diseno estatico:Sirve para un solo tamano de pantalla.
+- El diseno fluido:Se basa en porcentaje(%)dependiendo del tamano de la pantalla.
+- Diseno responsivo: Tiene puntos de quiebre(distintos tamanos) para aplicar diferentes estilos.
+
+### CSS MediaQueries
+
+Utiliza la regla '@media' para incluir un bloque de propiedades CSS solo si la condicion es verdadera.Ejemplo:
+
+```css
+
+
+/* si el tamano de la pantalla es de 600px o menor, el color de fondo del body sera verde*/
+@media only screen and (max-width: 600px){
+    body {
+        background-color: green;
+    }
+}
+```
+
+Existe ciertos tamanos de pantalla mas o menos estandarizados y estas serian sus respectivas media queries:
+
+```css
+/* Extra small devices (phones, 600px and down)*/
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up)*/
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up)*/
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops,992px and up)*/
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up)*/
+@media only screen and (min-width: 1200px) {...}
+```
+
+### Display
+
+```css
+/* si el tamano de la pantalla es de 600px o menor, el color de fondo del body sera verde*/
+@media only screen and (max-width: 600px) {...}
+
+
+
+
+
+
+
