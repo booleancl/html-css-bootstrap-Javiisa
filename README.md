@@ -205,7 +205,7 @@ Es relativo al 1% del ancho de la pantalla o viewport
 
 ### CSS MediaQueries
 
-Utiliza la regla '@media' para incluir un bloque de propiedades CSS solo si la condicion es verdadera.Ejemplo:
+Utiliza la regla `@media` para incluir un bloque de propiedades CSS solo si la condicion es verdadera.Ejemplo:
 
 ```css
 
@@ -241,9 +241,33 @@ Existe ciertos tamanos de pantalla mas o menos estandarizados y estas serian sus
 
 ```css
 /* si el tamano de la pantalla es de 600px o menor, el color de fondo del body sera verde*/
-@media only screen and (max-width: 600px) {...}
+@media only screen and (max-width: 600px){
+    body {
+        background-color: green;
+    }
+}
 
+p{
+    display: none;
+}
+```
 
+El valor de la propiedad display modofica como el navegador posicionara la caja del elemento.
+
+La caja puede ser de lado a lado, en ese caso la propiedad display tendra el valor `block`
+Tambien podemos establecer el valor como `inline` y en ese caso, la caja sera del menor tamano posible.Ejemplo:
+
+```css
+.side-to-side{
+    display: block;
+    border: solid
+}
+
+.narrow{
+    display: inline;
+    border: solid
+}
+```
 
 
 
